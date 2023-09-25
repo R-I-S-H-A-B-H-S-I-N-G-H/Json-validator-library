@@ -12,9 +12,11 @@ class JsonValidate {
 		const valid = validate(_data);
 		if (!valid) {
 			console.log(validate.errors);
+			return{error:validate.errors}
 		} else {
 			console.log("SCHEMA IS GOOD");
 		}
+		return {};
 	}
 }
 window.JsonValidate = (schema) => {
